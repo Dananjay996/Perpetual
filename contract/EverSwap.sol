@@ -117,6 +117,20 @@ contract EverSwap is ERC4626{
             revert("EverSwap: Borrower is not liquidatable");
         }
 
+        return true;
+
+    }
+
+    function closeBorrowerPosition(address _borrower) public virtual returns(bool){
+        Borrower memory borrower = addressToBorrower[_borrower];
+        uint256 collateral = borrower.collateral;
+        uint256 debt = borrower.debt;
+    
+        if(borrower.position == Position.LONG){
+             
+        }else {
+            
+        }
     }
 
 
